@@ -1,0 +1,25 @@
+<div class='container' ng-controller='questionsController'>
+	<div class='row header'>
+		<a href='#/'>Home</a> | <a href='#/addQuestion'>Add a Question</a> | <a href='#/signin'>Log In</a> | <a href='#/signup'>Registration</a>
+	</div>
+	<div class='row body'>
+		<input type="text" class="form-control pull-right" placeholder="search" ng-model='filter_name' style='width: 200px'>
+		<table class='table table-striped'>
+	        <thead>
+		        <th>Question</th>
+		        <th>Answers</th>
+		        <th>Action</th>
+	        </thead>
+	        <tbody>
+		        <tr ng-repeat='question in questions | filter: filter_name | orderBy: "-date"'>
+		        	<td ng-bind='question.question'></td>
+		        	<td ng-bind='question.answerCount'></td>
+		        	<td>
+		        		<a href='#/question'><input type='submit' class='btn btn-primary' value='Show' style='margin-right: 10px' ng-click='showQuestion(question)'></a>
+		        		<a href='#/answer'><input type='submit' class='btn btn-success' value='Answer' ng-click='showQuestion(question)'></a>
+		        	</td>
+		        </tr>
+	        </tbody>
+	    </table>
+	</div>
+</div>

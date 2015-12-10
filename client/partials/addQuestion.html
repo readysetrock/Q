@@ -1,0 +1,21 @@
+<div class='container' ng-controller='questionsController'>
+
+	<div class='row header'>
+		<a href='#/'>Home</a> 
+	</div>
+
+	<div class='row body'>
+		<div class='col-sm-6'>
+			<h1>New Question</h1>
+			<label>Question:</label>
+			<textarea class="form-control" rows="3" ng-model='newQuestion.question'></textarea>
+			<label>Description (Optional):</label>
+			<textarea class="form-control" rows="3" ng-model='newQuestion.description'></textarea>
+			<div class='pull-right' style='margin-top: 20px'>
+				<a href='#/'><input type='submit' class='btn btn-warning' value='Cancel'></a>
+				<a href='#/'><input type='submit' class='btn btn-primary' value='Submit' ng-click='addQuestion()'></a>
+			</div>
+		</div>
+	</div>
+
+</div>

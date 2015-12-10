@@ -1,0 +1,23 @@
+<div class='container' ng-controller='questionsController'>
+	<div class='row header'>
+		<a href='#/'>Home</a> 
+	</div>
+
+	<div class='row'>
+		<div class='col-sm-6'>
+			<h1 ng-bind='currentQuestion.question'></h1>
+			<h3 ng-bind='currentQuestion.description'></h3>
+			<label>Your Name: </label>
+			<input type='text' class='form-control' ng-model='newAnswer.name' style='width: 200px'>
+			<label>Your Answer:</label>
+			<textarea class="form-control" rows="3" ng-model='newAnswer.answer'></textarea>
+			<label>Supporting Details for your answer (Optional):</label>
+			<textarea class="form-control" rows="3" ng-model='newAnswer.details'></textarea>
+			<div class='pull-right' style='margin-top: 20px'>
+				<a href='#/'><input type='submit' class='btn btn-warning' value='Cancel'></a>
+				<a href='#/question'><input type='submit' class='btn btn-primary' value='Submit' ng-click='addAnswer()'></a>
+			</div>
+		</div>
+	</div>
+
+</div>

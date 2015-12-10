@@ -1,0 +1,56 @@
+    <div class='container' ng-controller='questionsController'>
+            <div class='row header'>
+            <a href='#/'>Home</a> | <a href='#/addQuestion'>Add a Question</a> | <a href='#/loginReg'>Log In</a> | <a href='#/loginReg'>Registration</a>
+            </div>
+        <div class="row body">
+            <div class='col-sm-6'>
+                    <div class="register-panel">
+                        <h3>Sign Up</h3>
+                        <form>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="email" class="form-control bordered-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" name="username" class="form-control bordered-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="password" class="form-control bordered-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Password Again</label>
+                                <input type="password" name="password" class="form-control bordered-input">
+                            </div>
+                            <div class="form-group">
+                                <label><input type="checkbox" name="terms"> I agree with the <a href="#" class="fpass">Terms and Conditions</a>.</label>
+                                <input type="submit" value="Sign up" class="btn btn-info pull-right">
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-panel">
+                         <h3>Login</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Username" class="form-control bordered-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Password" class="form-control bordered-input">
+                        </div>
+                        <fieldset>
+                            <div class="pull-left">
+                                <a class="fpass" href="#">
+                                Forgot Password?
+                                </a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#" class="btn blue">
+                                Submit
+                                </a>
+                            </div>
+                        </fieldset>
+                    </div>                    
+            </div>
+        </div>
+    </div>

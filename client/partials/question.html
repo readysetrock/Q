@@ -1,0 +1,21 @@
+<div class='container' ng-controller='questionsController'>
+	<div class='row header'>
+		<a href='#/'>Home</a> | <a href='#/addQuestion'>Add a Question</a> | <a href='#/loginReg'>Log In</a> | <a href='#/loginReg'>Registration</a>
+	</div>
+	<div class='row'>
+		<h1 ng-bind='currentQuestion.question'></h1>
+		<h3 ng-bind='currentQuestion.description'></h3>
+	</div>
+	<div class='row'>
+		<div class='col-sm-8' ng-repeat='answer in answers | orderBy: "date"| filter: currentQuestion._id'>
+			<h3 ng-bind='answer.name'></h3>
+			<h4 ng-bind='answer.answer' style='margin-left: 20px'></h4>
+			<p style='margin-left: 40px'>
+				Details: <span ng-bind='answer.details'></span>
+				<input type='submit' class='btn btn-primary pull-right' value='Like!' ng-click='like(answer, currentQuestion)'>
+				<span class='pull-right' style='margin-right: 10px'>likes</span>
+				<span class='pull-right' style='margin-right: 10px' ng-bind='answer.likes'></span>
+			</p>
+		</div>
+	</div>
+</div>
